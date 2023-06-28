@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'MovieClipApp/css/styles.css'%}">
+    <link rel="stylesheet" href="{% static 'MovieClipApp/css/myStyle.css'%}">
+    <script src="{% static 'MovieClipApp/js/bootstrap.min.js'%}"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg  fixed-top bg-dark" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand navText" href="{% url 'Home' %}">Movie Clip</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link navText" href="{% url 'Movies' %}">Movies</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="contenido">
+        {% block contenidoCambiante %}
+        
+        {% endblock %}
+    </div>
+    <footer></footer>
+</body>
+</html>
